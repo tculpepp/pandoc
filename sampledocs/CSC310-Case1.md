@@ -7,7 +7,7 @@ course: CSC310
 assignment: Module 1 Case
 ---
 
-```java
+~~~~~{#mycode .java .numberLines startFrom="100"}
  /**
 * The CalcTaxes program implements an application that requests tax information 
 * from the user and then calculates taxes due.
@@ -83,7 +83,7 @@ public class CalcTaxes {
         }
     } 
 }
-```
+~~~~~
 
 # User Screens
 

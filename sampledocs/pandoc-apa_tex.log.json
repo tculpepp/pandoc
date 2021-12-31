@@ -1,0 +1,14 @@
+[
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "from": "/Users/tculpepp/Documents/programming/pandoc/TridentAPA_template.tex",
+        "for": "/Users/tculpepp/Documents/programming/pandoc/TridentAPA_template.tex"
+    },
+    {
+        "type": "LoadedResource",
+        "verbosity": "INFO",
+        "from": "/Users/tculpepp/Documents/programming/pandoc/apa.csl",
+        "for": "/Users/tculpepp/Documents/programming/pandoc/apa.csl"
+    }
+]
