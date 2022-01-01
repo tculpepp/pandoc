@@ -1,0 +1,90 @@
+4:$if(colorlinks)$
+9:$if(mode)$
+14:\documentclass[$if(classoption)$\pandocDocMode,longtable,$for(classoption)$$classoption$$sep$,$endfor$$else$\pandocDocMode,longtable$endif$$if(floatsintext)$,floatsintext$endif$]{apa6}
+41:$if(floatsintext)$
+60:  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+65:$if(mathspec)$
+75:$for(fontfamilies)$
+78:$if(mainfont)$
+79:    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+81:$if(sansfont)$
+82:    \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+84:$if(monofont)$
+85:    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
+87:$if(mathfont)$
+88:$if(mathspec)$
+90:    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+92:    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+95:  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+98:$if(CJKmainfont)$
+101:    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+104:$if(luatexjapresetoptions)$
+106:    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
+109:$if(CJKmainfont)$
+111:    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
+112:    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+118:$if(lang)$
+120:  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
+121:$if(babel-newcommands)$
+125:  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+128:$for(polyglossia-otherlangs)$
+154:$if(colorlinks)$
+164:$if(title-meta)$
+167:$if(author-meta)$
+170:$if(keywords)$
+171:            pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+173:$if(colorlinks)$
+175:            linkcolor=$if(linkcolor)$$linkcolor$$else$Blue$endif$,
+176:            citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
+177:            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
+188:$if(links-as-notes)$
+192:$if(listings)$
+196:$if(highlighting-macros)$
+200:$if(strikeout)$
+205:$if(bibliography)$
+209:$for(bibliography)$
+213:$if(title)$
+218:$if(subtitle)$
+222:$if(author)$
+223:$if(twogroups)$
+224:\twoauthors$for(author)${$author$}$endfor$
+225:$else$$if(threegroups)$
+226:\threeauthors$for(author)${$author$}$endfor$
+227:$else$$if(fourgroups)$
+228:\fourauthors$for(author)${$author$}$endfor$
+229:$else$$if(fivegroups)$
+230:\fiveauthors$for(author)${$author$}$endfor$
+231:$else$$if(sixgroups)$
+232:\sixauthors$for(author)${$author$}$endfor$
+234:\author{$for(author)$$author$$sep$, $endfor$}
+238:$if(institute)$
+239:$if(twogroups)$
+240:\twoaffiliations$for(institute)${$institute$}$endfor$
+241:$else$$if(threegroups)$
+242:\threeaffiliations$for(institute)${$institute$}$endfor$
+243:$else$$if(fourgroups)$
+244:\fouraffiliations$for(institute)${$institute$}$endfor$
+245:$else$$if(fivegroups)$
+246:\fiveaffiliations$for(institute)${$institute$}$endfor$
+247:$else$$if(sixgroups)$
+248:\sixaffiliations$for(institute)${$institute$}$endfor$
+250:\affiliation{$for(institute)$$institute$$sep$\\ $endfor$}
+255:$if(date)$
+258:$if(authornote)$
+263:$if(abstract)$
+269:$if(keywords)$
+270:\keywords{$for(keywords)$$keywords$$sep$, $endfor$}$endif$
+277:$if(joucommands.leftheader)$
+279:$if(joucommands.journal)$
+281:$if(joucommands.volume)$
+283:$if(joucommands.ccoppy)$
+285:$if(joucommands.copnum)$
+292:$for(include-before)$
+335:$if(csl-refs)$
+363:$if(title)$\maketitle$endif$
+367:$if(bibliography)$
+368:\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+371:$for(include-after)$
+376:$if(lot)$
+379:$if(lof)$
+383:$if(biblatex)$$else$

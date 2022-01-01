@@ -1,0 +1,134 @@
+2:\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+4:$if(colorlinks)$
+7:$if(CJKmainfont)$
+12:$if(fontsize)$
+15:$if(papersize)$
+18:$if(beamer)$
+20:$if(handout)$
+23:$if(aspectratio)$
+27:$for(classoption)$
+31:$if(beamer)$
+32:$if(background-image)$
+41:\beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
+42:$for(beameroption)$
+48:$if(section-titles)$
+81:$if(beamerarticle)$
+85:$if(fontfamily)$
+86:\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
+90:$if(linestretch)$
+95:  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+99:$if(mathspec)$
+110:$if(mainfont)$
+111:  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+113:$if(sansfont)$
+114:  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+116:$if(monofont)$
+117:  \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
+119:$for(fontfamilies)$
+120:  \newfontfamily{$fontfamilies.name$}[$for(fontfamilies.options)$$fontfamilies.options$$sep$,$endfor$]{$fontfamilies.font$}
+122:$if(mathfont)$
+123:$if(mathspec)$
+125:    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+127:    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+130:  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+133:$if(CJKmainfont)$
+136:    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+139:$if(luatexjapresetoptions)$
+141:    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
+144:$if(CJKmainfont)$
+146:    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
+147:    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+151:$if(zero-width-non-joiner)$
+170:$if(beamer)$
+171:$if(theme)$
+172:\usetheme[$for(themeoptions)$$themeoptions$$sep$,$endfor$]{$theme$}
+174:$if(colortheme)$
+177:$if(fonttheme)$
+180:$if(mainfont)$
+183:$if(innertheme)$
+186:$if(outertheme)$
+193:  \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
+196:$if(indent)$
+209:$if(verbatim-in-note)$
+216:$if(title-meta)$
+219:$if(author-meta)$
+222:$if(lang)$
+225:$if(subject)$
+228:$if(keywords)$
+229:  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+231:$if(colorlinks)$
+233:  linkcolor={$if(linkcolor)$$linkcolor$$else$Maroon$endif$},
+234:  filecolor={$if(filecolor)$$filecolor$$else$Maroon$endif$},
+235:  citecolor={$if(citecolor)$$citecolor$$else$Blue$endif$},
+236:  urlcolor={$if(urlcolor)$$urlcolor$$else$Blue$endif$},
+242:$if(verbatim-in-note)$
+245:$if(geometry)$
+246:$if(beamer)$
+247:\geometry{$for(geometry)$$geometry$$sep$,$endfor$}
+249:\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+252:$if(beamer)$
+255:$if(listings)$
+261:$if(lhs)$
+264:$if(highlighting-macros)$
+267:$if(tables)$
+269:$if(multirow)$
+273:$if(beamer)$
+290:$if(graphics)$
+305:$if(links-as-notes)$
+309:$if(strikeout)$
+318:$if(numbersections)$
+319:\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
+323:$if(beamer)$
+325:$if(block-headings)$
+337:$if(pagestyle)$
+340:$if(csl-refs)$
+365:$if(lang)$
+372:$for(babel-otherlangs)$
+375:% get rid of language-specific shorthands (see #6817):
+379:$for(header-includes)$
+385:$if(dir)$
+394:$if(natbib)$
+396:\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
+398:$if(biblatex)$
+399:\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
+400:$for(bibliography)$
+404:$if(nocite-ids)$
+405:\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
+407:$if(csquotes)$
+411:$if(title)$
+412:\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
+414:$if(subtitle)$
+415:$if(beamer)$
+426:\author{$for(author)$$author$$sep$ \and $endfor$}
+428:$if(beamer)$
+429:$if(institute)$
+430:\institute{$for(institute)$$institute$$sep$ \and $endfor$}
+432:$if(titlegraphic)$
+435:$if(logo)$
+441:$if(has-frontmatter)$
+444:$if(title)$
+445:$if(beamer)$
+450:$if(abstract)$
+457:$for(include-before)$
+461:$if(toc)$
+462:$if(toc-title)$
+465:$if(beamer)$
+467:$if(toc-title)$
+474:$if(colorlinks)$
+475:\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+482:$if(lof)$
+485:$if(lot)$
+488:$if(linestretch)$
+491:$if(has-frontmatter)$
+496:$if(has-frontmatter)$
+499:$if(natbib)$
+500:$if(bibliography)$
+501:$if(biblio-title)$
+502:$if(has-chapters)$
+508:$if(beamer)$
+512:  \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+513:$if(beamer)$
+519:$if(biblatex)$
+520:$if(beamer)$
+526:\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+530:$for(include-after)$

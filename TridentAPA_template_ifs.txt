@@ -1,0 +1,69 @@
+4:$if(colorlinks)$
+14:%   $if(classoption)$
+16:%   $for(classoption)$
+22:%   $if(floatsintext)$,
+52:% $if(floatsintext)$
+71:  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
+76:$if(mathspec)$
+86:$for(fontfamilies)$
+89:$if(mainfont)$
+90:    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+92:$if(sansfont)$
+93:    \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+95:$if(monofont)$
+96:    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
+98:$if(mathfont)$
+99:$if(mathspec)$
+101:    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+103:    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+106:  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+109:$if(CJKmainfont)$
+112:    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+115:$if(luatexjapresetoptions)$
+117:    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
+120:$if(CJKmainfont)$
+122:    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
+123:    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
+129:$if(lang)$
+131:  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
+132:$if(babel-newcommands)$
+136:  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
+139:$for(polyglossia-otherlangs)$
+165:$if(colorlinks)$
+175:$if(title)$
+178:$if(author)$
+181:$if(keywords)$
+182:            pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
+184:$if(colorlinks)$
+186:            linkcolor=$if(linkcolor)$$linkcolor$$else$Blue$endif$,
+187:            citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
+188:            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
+199:$if(links-as-notes)$
+203:$if(listings)$
+207:$if(highlighting-macros)$
+211:$if(strikeout)$
+216:$if(bibliography)$
+220:$for(bibliography)$
+224:$if(title)$
+229:$if(subtitle)$
+233:$if(author)$
+236:$if(institute)$
+240:$if(date)$
+243:% $if(authornote)$
+248:% $if(abstract)$
+254:% $if(keywords)$
+255:% \keywords{$for(keywords)$$keywords$$sep$, $endfor$}$endif$
+262:% $if(joucommands.leftheader)$
+264:% $if(joucommands.journal)$
+266:% $if(joucommands.volume)$
+268:% $if(joucommands.ccoppy)$
+270:% $if(joucommands.copnum)$
+277:$for(include-before)$
+320:$if(csl-refs)$
+348:$if(title)$\maketitle$endif$
+352:$if(bibliography)$
+353:\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+356:$for(include-after)$
+361:$if(lot)$
+364:$if(lof)$
+368:$if(biblatex)$$else$
