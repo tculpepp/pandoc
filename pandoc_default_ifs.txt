@@ -1,134 +1,91 @@
-\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
-$if(colorlinks)$
-$if(CJKmainfont)$
-$if(fontsize)$
-$if(papersize)$
-$if(beamer)$
-$if(handout)$
-$if(aspectratio)$
-$for(classoption)$
-$if(beamer)$
-$if(background-image)$
-\beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
-$for(beameroption)$
-$if(section-titles)$
-$if(beamerarticle)$
-$if(fontfamily)$
-\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
-$if(linestretch)$
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-$if(mathspec)$
-$if(mainfont)$
-  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$if(sansfont)$
-  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$if(monofont)$
-  \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
-$for(fontfamilies)$
-  \newfontfamily{$fontfamilies.name$}[$for(fontfamilies.options)$$fontfamilies.options$$sep$,$endfor$]{$fontfamilies.font$}
-$if(mathfont)$
-$if(mathspec)$
-    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-$if(CJKmainfont)$
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(luatexjapresetoptions)$
-    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
-$if(CJKmainfont)$
-    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
-    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(zero-width-non-joiner)$
-$if(beamer)$
-$if(theme)$
-\usetheme[$for(themeoptions)$$themeoptions$$sep$,$endfor$]{$theme$}
-$if(colortheme)$
-$if(fonttheme)$
-$if(mainfont)$
-$if(innertheme)$
-$if(outertheme)$
-  \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
-$if(indent)$
-$if(verbatim-in-note)$
-$if(title-meta)$
-$if(author-meta)$
-$if(lang)$
-$if(subject)$
-$if(keywords)$
-  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
-$if(colorlinks)$
-  linkcolor={$if(linkcolor)$$linkcolor$$else$Maroon$endif$},
-  filecolor={$if(filecolor)$$filecolor$$else$Maroon$endif$},
-  citecolor={$if(citecolor)$$citecolor$$else$Blue$endif$},
-  urlcolor={$if(urlcolor)$$urlcolor$$else$Blue$endif$},
-$if(verbatim-in-note)$
-$if(geometry)$
-$if(beamer)$
-\geometry{$for(geometry)$$geometry$$sep$,$endfor$}
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$if(beamer)$
-$if(listings)$
-$if(lhs)$
-$if(highlighting-macros)$
-$if(tables)$
-$if(multirow)$
-$if(beamer)$
-$if(graphics)$
-$if(links-as-notes)$
-$if(strikeout)$
-$if(numbersections)$
-\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
-$if(beamer)$
-$if(block-headings)$
-$if(pagestyle)$
-$if(csl-refs)$
-$if(lang)$
-$for(babel-otherlangs)$
-% get rid of language-specific shorthands (see #6817):
-$for(header-includes)$
-$if(dir)$
-$if(natbib)$
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-$if(biblatex)$
-\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
-$for(bibliography)$
-$if(nocite-ids)$
-\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$if(csquotes)$
-$if(title)$
-\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
-$if(subtitle)$
-$if(beamer)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$if(beamer)$
-$if(institute)$
-\institute{$for(institute)$$institute$$sep$ \and $endfor$}
-$if(titlegraphic)$
-$if(logo)$
-$if(has-frontmatter)$
-$if(title)$
-$if(beamer)$
-$if(abstract)$
-$for(include-before)$
-$if(toc)$
-$if(toc-title)$
-$if(beamer)$
-$if(toc-title)$
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
-$if(lof)$
-$if(lot)$
-$if(linestretch)$
-$if(has-frontmatter)$
-$if(has-frontmatter)$
-$if(natbib)$
-$if(bibliography)$
-$if(biblio-title)$
-$if(has-chapters)$
-$if(beamer)$
-  \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
-$if(beamer)$
-$if(biblatex)$
-$if(beamer)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-$for(include-after)$
+colorlinks
+CJKmainfont
+fontsize
+papersize
+beamer
+handout
+aspectratio
+beamer
+background-image
+section-titles
+beamerarticle
+fontfamily
+linestretch
+mathspec
+mainfont
+sansfont
+monofont
+mathfont
+mathspec
+CJKmainfont
+luatexjapresetoptions
+CJKmainfont
+zero-width-non-joiner
+beamer
+theme
+colortheme
+fonttheme
+mainfont
+innertheme
+outertheme
+indent
+verbatim-in-note
+title-meta
+author-meta
+lang
+subject
+keywords
+colorlinks
+verbatim-in-note
+geometry
+beamer
+beamer
+listings
+lhs
+highlighting-macros
+tables
+multirow
+beamer
+graphics
+links-as-notes
+strikeout
+numbersections
+beamer
+block-headings
+pagestyle
+csl-refs
+lang
+dir
+natbib
+biblatex
+nocite-ids
+csquotes
+title
+subtitle
+beamer
+beamer
+institute
+titlegraphic
+logo
+has-frontmatter
+title
+beamer
+abstract
+toc
+toc-title
+beamer
+toc-title
+colorlinks
+lof
+lot
+linestretch
+has-frontmatter
+has-frontmatter
+natbib
+bibliography
+biblio-title
+has-chapters
+beamer
+beamer
+biblatex
+beamer

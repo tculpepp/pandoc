@@ -1,201 +1,124 @@
-% Copyright (c) 2017 - 2021, Pascal Wagler;
-% Copyright (c) 2014 - 2021, John MacFarlane
-% INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
-% LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
-\PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
-$if(dir)$
-$if(latex-dir-rtl)$
-$if(CJKmainfont)$
-$if(fontsize)$
-$if(lang)$
-$if(papersize)$
-$if(beamer)$
-$if(handout)$
-$if(aspectratio)$
-$for(classoption)$
-]{$if(beamer)$$documentclass$$else$$if(book)$scrbook$else$scrartcl$endif$$endif$}
-$if(beamer)$
-$if(background-image)$
-\beamertemplatenavigationsymbols$if(navigation)$$navigation$$else$empty$endif$
-$for(beameroption)$
-$if(section-titles)$
-$if(beamerarticle)$
-$if(fontfamily)$
-\usepackage[$for(fontfamilyoptions)$$fontfamilyoptions$$sep$,$endfor$]{$fontfamily$}
-$if(linestretch)$
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-$if(mathspec)$
-$if(mainfont)$
-  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$if(sansfont)$
-  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$if(monofont)$
-  \setmonofont[$for(monofontoptions)$$monofontoptions$$sep$,$endfor$]{$monofont$}
-$for(fontfamilies)$
-  \newfontfamily{$fontfamilies.name$}[$for(fontfamilies.options)$$fontfamilies.options$$sep$,$endfor$]{$fontfamilies.font$}
-$if(mathfont)$
-$if(mathspec)$
-    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-$if(CJKmainfont)$
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(luatexjapresetoptions)$
-    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
-$if(CJKmainfont)$
-    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
-    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(zero-width-non-joiner)$
-$if(beamer)$
-$if(theme)$
-\usetheme[$for(themeoptions)$$themeoptions$$sep$,$endfor$]{$theme$}
-$if(colortheme)$
-$if(fonttheme)$
-$if(mainfont)$
-$if(innertheme)$
-$if(outertheme)$
-  \usepackage[$for(microtypeoptions)$$microtypeoptions$$sep$,$endfor$]{microtype}
-$if(indent)$
-$if(verbatim-in-note)$
-$if(footnotes-pretty)$
-% load footmisc in order to customize footnotes (footmisc has to be loaded before hyperref, cf. https://tex.stackexchange.com/a/169124/144087)
-$if(title-meta)$
-$if(author-meta)$
-$if(lang)$
-$if(subject)$
-$if(keywords)$
-  pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
-$if(colorlinks)$
-  linkcolor={$if(linkcolor)$$linkcolor$$else$default-linkcolor$endif$},
-  filecolor={$if(filecolor)$$filecolor$$else$default-filecolor$endif$},
-  citecolor={$if(citecolor)$$citecolor$$else$default-citecolor$endif$},
-  urlcolor={$if(urlcolor)$$urlcolor$$else$default-urlcolor$endif$},
-$if(verbatim-in-note)$
-$if(geometry)$
-$if(beamer)$
-\geometry{$for(geometry)$$geometry$$sep$,$endfor$}
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$if(beamer)$
-\usepackage[margin=2.5cm,includehead=true,includefoot=true,centering,$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
-$if(titlepage-logo)$
-$if(beamer)$
-$if(listings)$
-$if(listings-no-page-break)$
-$if(lhs)$
-$if(highlighting-macros)$
-% Redefine the verbatim environment 'Highlighting' to break long lines (with
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,fontsize=$if(code-block-font-size)$$code-block-font-size$$else$\small$endif$,commandchars=\\\{\}}
-$if(tables)$
-$if(multirow)$
-$if(beamer)$
-$if(footnotes-disable-backlinks)$
-$if(graphics)$
-$if(links-as-notes)$
-$if(strikeout)$
-$if(numbersections)$
-\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$5$endif$}
-$if(beamer)$
-$if(block-headings)$
-$if(pagestyle)$
-$if(csl-refs)$
-$for(header-includes)$
-$if(lang)$
-\usepackage[$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
-% get rid of language-specific shorthands (see #6817):
-$if(dir)$
-$if(natbib)$
-\bibliographystyle{$if(biblio-style)$$biblio-style$$else$plainnat$endif$}
-$if(biblatex)$
-\usepackage[$if(biblio-style)$style=$biblio-style$,$endif$$for(biblatexoptions)$$biblatexoptions$$sep$,$endfor$]{biblatex}
-$for(bibliography)$
-$if(nocite-ids)$
-\nocite{$for(nocite-ids)$$it$$sep$, $endfor$}
-$if(csquotes)$
-$if(title)$
-\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
-$if(subtitle)$
-$if(beamer)$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-$if(beamer)$
-$if(institute)$
-\institute{$for(institute)$$institute$$sep$ \and $endfor$}
-$if(titlegraphic)$
-$if(logo)$
-$if(page-background)$
-$if(titlepage)$
-$if(titlepage-background)$
-$if(geometry)$
-$if(beamer)$
-\usepackage[font={stretch=1.2}, textfont={color=caption-color}, position=top, skip=4mm, labelfont=bf, singlelinecheck=false, justification=$if(caption-justification)$$caption-justification$$else$raggedright$endif$]{caption}
-  $if(fontfamily)$
-  $if(mainfont)$
-  % This issue is already fixed (see https://github.com/silkeh/latex-sourcecodepro/pull/5) but the
-$if(beamer)$
-$if(beamer)$
-\author{$for(author)$$author$$sep$, $endfor$}
-$if(tables)$
-\renewcommand{\arraystretch}{1.3}     % spacing (padding)
-$if(table-use-row-colors)$
-% table because pandoc uses @-expressions (@{}) like so:
-$if(listings)$
-$if(listings-disable-line-numbers)$
-                      $if(code-block-font-size)$$code-block-font-size$$else$\small$endif$%
-% Java (Java SE 12, 2019-06-22)
-    % normal keywords (without data types)
-$if(beamer)$
-$if(disable-header-and-footer)$
-  \ihead*{$if(header-left)$$header-left$$else$$title$$endif$}
-  \chead*{$if(header-center)$$header-center$$else$$endif$}
-  \ohead*{$if(header-right)$$header-right$$else$$date$$endif$}
-  \ifoot*{$if(footer-left)$$footer-left$$else$$for(author)$$author$$sep$, $endfor$$endif$}
-  \cfoot*{$if(footer-center)$$footer-center$$else$$endif$}
-  \ofoot*{$if(footer-right)$$footer-right$$else$\thepage$endif$}
-$if(book)$
-$if(page-background)$
-opacity=$if(page-background-opacity)$$page-background-opacity$$else$0.2$endif$,
-$if(beamer)$
-$if(titlepage)$
-$if(titlepage-background)$
-$if(titlepage-color)$
-$if(titlepage-background)$
-\tikz[remember picture,overlay] \node[inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{$titlepage-background$}};
-\color[HTML]{$if(titlepage-text-color)$$titlepage-text-color$$else$5F5F5F$endif$}
-\makebox[0pt][l]{\colorRule[$if(titlepage-rule-color)$$titlepage-rule-color$$else$435488$endif$]{1.3\textwidth}{$if(titlepage-rule-height)$$titlepage-rule-height$$else$4$endif$pt}}
-$if(titlepage-background)$
-  $if(subtitle)$
-  \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$} \vskip 0.6em \textsf{$date$}}
-  $if(subtitle)$
-  \noindent {\Large \textsf{$for(author)$$author$$sep$, $endfor$}}
-$if(titlepage-logo)$
-\includegraphics[width=$if(logo-width)$$logo-width$$else$35mm$endif$, left]{$titlepage-logo$}
-$if(titlepage-background)$
-$if(has-frontmatter)$
-$if(title)$
-$if(beamer)$
-$if(abstract)$
-$if(first-chapter)$
-$for(include-before)$
-$if(toc)$
-$if(toc-title)$
-$if(beamer)$
-$if(toc-title)$
-$if(toc-own-page)$
-$if(colorlinks)$
-\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
-$if(toc-own-page)$
-$if(lof)$
-$if(lot)$
-$if(linestretch)$
-$if(has-frontmatter)$
-$if(has-frontmatter)$
-$if(natbib)$
-$if(bibliography)$
-$if(biblio-title)$
-$if(has-chapters)$
-$if(beamer)$
-  \bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
-$if(beamer)$
-$if(biblatex)$
-$if(beamer)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-$for(include-after)$
+dir
+latex-dir-rtl
+CJKmainfont
+fontsize
+lang
+papersize
+beamer
+handout
+aspectratio
+beamer
+background-image
+section-titles
+beamerarticle
+fontfamily
+linestretch
+mathspec
+mainfont
+sansfont
+monofont
+mathfont
+mathspec
+CJKmainfont
+luatexjapresetoptions
+CJKmainfont
+zero-width-non-joiner
+beamer
+theme
+colortheme
+fonttheme
+mainfont
+innertheme
+outertheme
+indent
+verbatim-in-note
+footnotes-pretty
+title-meta
+author-meta
+lang
+subject
+keywords
+colorlinks
+verbatim-in-note
+geometry
+beamer
+beamer
+titlepage-logo
+beamer
+listings
+listings-no-page-break
+lhs
+highlighting-macros
+tables
+multirow
+beamer
+footnotes-disable-backlinks
+graphics
+links-as-notes
+strikeout
+numbersections
+beamer
+block-headings
+pagestyle
+csl-refs
+lang
+dir
+natbib
+biblatex
+nocite-ids
+csquotes
+title
+subtitle
+beamer
+beamer
+institute
+titlegraphic
+logo
+page-background
+titlepage
+titlepage-background
+geometry
+beamer
+beamer
+beamer
+tables
+table-use-row-colors
+listings
+listings-disable-line-numbers
+beamer
+disable-header-and-footer
+book
+page-background
+beamer
+titlepage
+titlepage-background
+titlepage-color
+titlepage-background
+titlepage-background
+titlepage-logo
+titlepage-background
+has-frontmatter
+title
+beamer
+abstract
+first-chapter
+toc
+toc-title
+beamer
+toc-title
+toc-own-page
+colorlinks
+toc-own-page
+lof
+lot
+linestretch
+has-frontmatter
+has-frontmatter
+natbib
+bibliography
+biblio-title
+has-chapters
+beamer
+beamer
+biblatex
+beamer

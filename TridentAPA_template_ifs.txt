@@ -1,69 +1,33 @@
-$if(colorlinks)$
-%   $if(classoption)$
-%   $for(classoption)$
-%   $if(floatsintext)$,
-% $if(floatsintext)$
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-$if(mathspec)$
-$for(fontfamilies)$
-$if(mainfont)$
-    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$if(sansfont)$
-    \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$if(monofont)$
-    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
-$if(mathfont)$
-$if(mathspec)$
-    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-$if(CJKmainfont)$
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(luatexjapresetoptions)$
-    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
-$if(CJKmainfont)$
-    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
-    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(lang)$
-  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
-$if(babel-newcommands)$
-  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
-$for(polyglossia-otherlangs)$
-$if(colorlinks)$
-$if(title)$
-$if(author)$
-$if(keywords)$
-            pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
-$if(colorlinks)$
-            linkcolor=$if(linkcolor)$$linkcolor$$else$Blue$endif$,
-            citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
-$if(links-as-notes)$
-$if(listings)$
-$if(highlighting-macros)$
-$if(strikeout)$
-$if(bibliography)$
-$for(bibliography)$
-$if(title)$
-$if(subtitle)$
-$if(author)$
-$if(institute)$
-$if(date)$
-% $if(authornote)$
-% $if(abstract)$
-% $if(keywords)$
-% \keywords{$for(keywords)$$keywords$$sep$, $endfor$}$endif$
-% $if(joucommands.leftheader)$
-% $if(joucommands.journal)$
-% $if(joucommands.volume)$
-% $if(joucommands.ccoppy)$
-% $if(joucommands.copnum)$
-$for(include-before)$
-$if(csl-refs)$
-$if(title)$\maketitle$endif$
-$if(bibliography)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-$for(include-after)$
-$if(lot)$
-$if(lof)$
-$if(biblatex)$$else$
+colorlinks
+mathspec
+mainfont
+sansfont
+monofont
+mathfont
+mathspec
+CJKmainfont
+luatexjapresetoptions
+CJKmainfont
+lang
+babel-newcommands
+colorlinks
+title
+author
+keywords
+colorlinks
+links-as-notes
+listings
+highlighting-macros
+strikeout
+bibliography
+title
+subtitle
+author
+institute
+date
+csl-refs
+title)$\maketitle$endi
+bibliography
+lot
+lof
+biblatex)$$els

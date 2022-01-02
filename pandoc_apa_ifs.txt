@@ -1,90 +1,45 @@
-$if(colorlinks)$
-$if(mode)$
-\documentclass[$if(classoption)$\pandocDocMode,longtable,$for(classoption)$$classoption$$sep$,$endfor$$else$\pandocDocMode,longtable$endif$$if(floatsintext)$,floatsintext$endif$]{apa6}
-$if(floatsintext)$
-  \usepackage[$if(fontenc)$$fontenc$$else$T1$endif$]{fontenc}
-$if(mathspec)$
-$for(fontfamilies)$
-$if(mainfont)$
-    \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
-$if(sansfont)$
-    \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
-$if(monofont)$
-    \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
-$if(mathfont)$
-$if(mathspec)$
-    \setmathfont(Digits,Latin,Greek)[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-    \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
-$if(CJKmainfont)$
-    \setCJKmainfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(luatexjapresetoptions)$
-    \usepackage[$for(luatexjapresetoptions)$$luatexjapresetoptions$$sep$,$endfor$]{luatexja-preset}
-$if(CJKmainfont)$
-    \usepackage[$for(luatexjafontspecoptions)$$luatexjafontspecoptions$$sep$,$endfor$]{luatexja-fontspec}
-    \setmainjfont[$for(CJKoptions)$$CJKoptions$$sep$,$endfor$]{$CJKmainfont$}
-$if(lang)$
-  \usepackage[shorthands=off,$for(babel-otherlangs)$$babel-otherlangs$,$endfor$main=$babel-lang$]{babel}
-$if(babel-newcommands)$
-  % load polyglossia as late as possible as it *could* call bidi if RTL lang (e.g. Hebrew or Arabic)
-$for(polyglossia-otherlangs)$
-$if(colorlinks)$
-$if(title-meta)$
-$if(author-meta)$
-$if(keywords)$
-            pdfkeywords={$for(keywords)$$keywords$$sep$, $endfor$},
-$if(colorlinks)$
-            linkcolor=$if(linkcolor)$$linkcolor$$else$Blue$endif$,
-            citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
-$if(links-as-notes)$
-$if(listings)$
-$if(highlighting-macros)$
-$if(strikeout)$
-$if(bibliography)$
-$for(bibliography)$
-$if(title)$
-$if(subtitle)$
-$if(author)$
-$if(twogroups)$
-\twoauthors$for(author)${$author$}$endfor$
-$else$$if(threegroups)$
-\threeauthors$for(author)${$author$}$endfor$
-$else$$if(fourgroups)$
-\fourauthors$for(author)${$author$}$endfor$
-$else$$if(fivegroups)$
-\fiveauthors$for(author)${$author$}$endfor$
-$else$$if(sixgroups)$
-\sixauthors$for(author)${$author$}$endfor$
-\author{$for(author)$$author$$sep$, $endfor$}
-$if(institute)$
-$if(twogroups)$
-\twoaffiliations$for(institute)${$institute$}$endfor$
-$else$$if(threegroups)$
-\threeaffiliations$for(institute)${$institute$}$endfor$
-$else$$if(fourgroups)$
-\fouraffiliations$for(institute)${$institute$}$endfor$
-$else$$if(fivegroups)$
-\fiveaffiliations$for(institute)${$institute$}$endfor$
-$else$$if(sixgroups)$
-\sixaffiliations$for(institute)${$institute$}$endfor$
-\affiliation{$for(institute)$$institute$$sep$\\ $endfor$}
-$if(date)$
-$if(authornote)$
-$if(abstract)$
-$if(keywords)$
-\keywords{$for(keywords)$$keywords$$sep$, $endfor$}$endif$
-$if(joucommands.leftheader)$
-$if(joucommands.journal)$
-$if(joucommands.volume)$
-$if(joucommands.ccoppy)$
-$if(joucommands.copnum)$
-$for(include-before)$
-$if(csl-refs)$
-$if(title)$\maketitle$endif$
-$if(bibliography)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
-$for(include-after)$
-$if(lot)$
-$if(lof)$
-$if(biblatex)$$else$
+colorlinks
+mode
+floatsintext
+mathspec
+mainfont
+sansfont
+monofont
+mathfont
+mathspec
+CJKmainfont
+luatexjapresetoptions
+CJKmainfont
+lang
+babel-newcommands
+colorlinks
+title-meta
+author-meta
+keywords
+colorlinks
+links-as-notes
+listings
+highlighting-macros
+strikeout
+bibliography
+title
+subtitle
+author
+twogroups
+institute
+twogroups
+date
+authornote
+abstract
+keywords
+joucommands.leftheader
+joucommands.journal
+joucommands.volume
+joucommands.ccoppy
+joucommands.copnum
+csl-refs
+title)$\maketitle$endi
+bibliography
+lot
+lof
+biblatex)$$els
