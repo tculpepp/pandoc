@@ -5,6 +5,12 @@ author: Thomas Culpepper
 institute: Trident University International
 course: CSC310
 assignment: Module 1 Case
+
+pandoc-latex-fontsize:
+  - classes: [smallcontent]
+    size: small
+  - classes: [largecontent, important]
+    size: huge
 ---
 
 
@@ -12,7 +18,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in tellus ornare
 
 Quisque viverra ex vitae lorem dictum, at facilisis odio tempus. Proin libero risus, gravida et bibendum eget, ornare sit amet mi. Phasellus vitae suscipit augue. Etiam iaculis mauris in suscipit interdum. Sed at nisl dolor. Ut ut sollicitudin tortor, eget porttitor erat. Vestibulum viverra ac nibh sit amet pretium. Ut commodo scelerisque neque tempor eleifend. Nulla facilisi. In mollis est quis urna efficitur, id porta leo maximus. Ut vel augue enim. Aliquam non odio pharetra lorem gravida facilisis.
 
-~~~~~{#mycode .java .numberLines startFrom="100"}
+~~~~~smallcontent{#mycode .java .numberLines startFrom="100"}
 import javax.swing.JOptionPane;
 import java.util.regex.*;
 

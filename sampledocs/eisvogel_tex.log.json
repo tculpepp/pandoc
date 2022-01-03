@@ -16,35 +16,5 @@
         "verbosity": "INFO",
         "from": "media/CSC310-Case1-1.png",
         "for": "media/CSC310-Case1-1.png"
-    },
-    {
-        "type": "LoadedResource",
-        "verbosity": "INFO",
-        "from": "media/CSC310-Case1-2.png",
-        "for": "media/CSC310-Case1-2.png"
-    },
-    {
-        "type": "LoadedResource",
-        "verbosity": "INFO",
-        "from": "media/CSC310-Case1-3.png",
-        "for": "media/CSC310-Case1-3.png"
-    },
-    {
-        "type": "LoadedResource",
-        "verbosity": "INFO",
-        "from": "media/CSC310-Case1-4.png",
-        "for": "media/CSC310-Case1-4.png"
-    },
-    {
-        "type": "LoadedResource",
-        "verbosity": "INFO",
-        "from": "media/CSC310-Case1-5.png",
-        "for": "media/CSC310-Case1-5.png"
-    },
-    {
-        "type": "LoadedResource",
-        "verbosity": "INFO",
-        "from": "media/CSC310-Case1-6.png",
-        "for": "media/CSC310-Case1-6.png"
     }
 ]

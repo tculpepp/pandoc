@@ -29,7 +29,8 @@
                 "--citeproc",
                 "--filter=pandoc-xnos",
                 "--csl=${workspaceRoot}/apa.csl",
-                "--template=${workspaceRoot}/TridentAPA_template.tex"
+                "--template=${workspaceRoot}/TridentAPA_template.tex",
+                "--filter pandoc-latex-fontsize"
             ],
             "group": "build"
         },

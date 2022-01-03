@@ -208,20 +208,35 @@
 \begin{document}
 \maketitle
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+tellus ornare libero elementum bibendum a sit amet magna. Vestibulum eu
+ex vitae odio hendrerit hendrerit. Integer aliquet, nisi non hendrerit
+porta, dui eros laoreet velit, sit amet finibus justo risus sit amet
+tortor. Mauris at sapien libero. Vestibulum eleifend purus quis elit
+pulvinar fermentum id id massa. Proin tincidunt nisi a vehicula rhoncus.
+Nullam ornare pretium accumsan. Pellentesque sollicitudin augue lorem,
+sit amet vulputate nunc dictum sed. Maecenas in feugiat felis, et
+facilisis enim. Etiam interdum, elit sit amet interdum commodo, dolor
+eros suscipit orci, vitae porta massa nunc nec odio. Vivamus quis arcu
+erat. Sed lorem lacus, scelerisque quis facilisis ac, volutpat vitae
+ante. Nulla tellus mi, aliquet ut laoreet ut, lobortis cursus nunc. In
+et facilisis mi, sodales finibus mauris. Cras a nisi suscipit quam
+accumsan dapibus in sed tortor. Sed gravida nibh justo, eu mattis lectus
+semper ornare.
+
+Quisque viverra ex vitae lorem dictum, at facilisis odio tempus. Proin
+libero risus, gravida et bibendum eget, ornare sit amet mi. Phasellus
+vitae suscipit augue. Etiam iaculis mauris in suscipit interdum. Sed at
+nisl dolor. Ut ut sollicitudin tortor, eget porttitor erat. Vestibulum
+viverra ac nibh sit amet pretium. Ut commodo scelerisque neque tempor
+eleifend. Nulla facilisi. In mollis est quis urna efficitur, id porta
+leo maximus. Ut vel augue enim. Aliquam non odio pharetra lorem gravida
+facilisis.
+
 \hypertarget{mycode}{%
 \label{mycode}}%
 \begin{Shaded}
 \begin{Highlighting}[numbers=left,,firstnumber=100,]
- \CommentTok{/**}
-\CommentTok{*}\NormalTok{ The CalcTaxes program implements an application that requests tax information }
-\CommentTok{*}\NormalTok{ from the user and then calculates taxes due}\CommentTok{.}
-\CommentTok{*}
-\CommentTok{*}\NormalTok{ Assignment}\CommentTok{:}\NormalTok{ CSC310 Mod }\CommentTok{1}\NormalTok{ Case}
-\CommentTok{*}
-\CommentTok{*} \CommentTok{@}\NormalTok{author  Thomas Culpepper}
-\CommentTok{*} \CommentTok{@}\NormalTok{version }\CommentTok{1.0}
-\CommentTok{*} \CommentTok{@}\NormalTok{since   }\CommentTok{2021{-}12{-}28}
-\CommentTok{*/}
 \KeywordTok{import} \ImportTok{javax}\OperatorTok{.}\ImportTok{swing}\OperatorTok{.}\ImportTok{JOptionPane}\OperatorTok{;}
 \KeywordTok{import} \ImportTok{java}\OperatorTok{.}\ImportTok{util}\OperatorTok{.}\ImportTok{regex}\OperatorTok{.*;}
 
@@ -242,6 +257,40 @@
                 \OperatorTok{\{}\StringTok{"Enter your Federal tax rate (\%):"}\OperatorTok{,}\StringTok{"num"}\OperatorTok{\},}
                 \OperatorTok{\{}\StringTok{"Enter your State tax rate (\%):"}\OperatorTok{,}\StringTok{"num"}\OperatorTok{\}}
             \OperatorTok{\};}
+\end{Highlighting}
+\end{Shaded}
+
+Donec dui nunc, convallis nec lectus non, accumsan dictum lorem. Nam
+viverra, libero sed pulvinar tincidunt, mi augue rhoncus neque, et
+venenatis turpis velit quis odio. Nulla feugiat vitae urna id congue.
+Pellentesque efficitur facilisis hendrerit. Quisque vehicula vel risus
+vel faucibus. Quisque eleifend mattis maximus. Interdum et malesuada
+fames ac ante ipsum primis in faucibus.
+
+Mauris blandit nisi non dapibus lobortis. Morbi sit amet elementum
+libero, sed laoreet est. Sed auctor nibh ac semper faucibus. Fusce
+pretium ultrices neque, sit amet luctus mi sollicitudin vel. Suspendisse
+efficitur metus quis dui posuere, id vehicula dui pulvinar. Donec sit
+amet dapibus diam. Donec libero sem, fringilla et cursus ut, lacinia
+quis nisl. Donec ullamcorper malesuada purus tempor venenatis. Morbi vel
+ante vulputate, feugiat velit at, pellentesque odio. Phasellus nec justo
+aliquet, maximus quam a, venenatis ligula. Ut porttitor metus id diam
+sollicitudin, non lacinia augue faucibus.
+
+Morbi quis lobortis neque. Aenean blandit, dui et sollicitudin
+ullamcorper, neque leo rhoncus libero, vitae ullamcorper ex massa vitae
+dolor. Nam placerat posuere nulla ac consectetur. In porta ornare nisi
+quis suscipit. Quisque sed turpis sit amet mi sagittis molestie ac in
+nisi. Integer ligula nulla, lobortis ac elementum sit amet, ultricies
+eget leo. Nulla ullamcorper dolor vel neque pretium, quis porttitor est
+consequat. Donec euismod mauris sit amet dui fermentum, eget tempor dui
+suscipit. Ut eros risus, semper in sollicitudin vel, lacinia a sapien.
+Duis fermentum mauris nec diam vestibulum fringilla.
+
+\hypertarget{mycodemore}{%
+\label{mycodemore}}%
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,firstnumber=100,]
             \ControlFlowTok{for} \OperatorTok{(}\DataTypeTok{int}\NormalTok{ i}\OperatorTok{=}\DecValTok{0}\OperatorTok{;}\NormalTok{ i }\OperatorTok{\textless{}}\NormalTok{ inputRequests}\OperatorTok{.}\FunctionTok{length}\OperatorTok{;}\NormalTok{ i}\OperatorTok{++)} \OperatorTok{\{}
 \NormalTok{                userInputs}\OperatorTok{[}\NormalTok{i}\OperatorTok{]} \OperatorTok{=} \BuiltInTok{JOptionPane}\OperatorTok{.}\FunctionTok{showInputDialog}\OperatorTok{(}\NormalTok{inputRequests}\OperatorTok{[}\NormalTok{i}\OperatorTok{][}\DecValTok{0}\OperatorTok{]);}
                 \ControlFlowTok{if} \OperatorTok{(}\NormalTok{userInputs}\OperatorTok{[}\NormalTok{i}\OperatorTok{]} \OperatorTok{==} \KeywordTok{null}\OperatorTok{)} \OperatorTok{\{} \CommentTok{// Exit cleanly if user hits cancel}
@@ -290,8 +339,57 @@
 \end{Highlighting}
 \end{Shaded}
 
-\hypertarget{user-screens}{%
-\section{User Screens}\label{user-screens}}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in
+tellus ornare libero elementum bibendum a sit amet magna. Vestibulum eu
+ex vitae odio hendrerit hendrerit. Integer aliquet, nisi non hendrerit
+porta, dui eros laoreet velit, sit amet finibus justo risus sit amet
+tortor. Mauris at sapien libero. Vestibulum eleifend purus quis elit
+pulvinar fermentum id id massa. Proin tincidunt nisi a vehicula rhoncus.
+Nullam ornare pretium accumsan. Pellentesque sollicitudin augue lorem,
+sit amet vulputate nunc dictum sed. Maecenas in feugiat felis, et
+facilisis enim. Etiam interdum, elit sit amet interdum commodo, dolor
+eros suscipit orci, vitae porta massa nunc nec odio. Vivamus quis arcu
+erat. Sed lorem lacus, scelerisque quis facilisis ac, volutpat vitae
+ante. Nulla tellus mi, aliquet ut laoreet ut, lobortis cursus nunc. In
+et facilisis mi, sodales finibus mauris. Cras a nisi suscipit quam
+accumsan dapibus in sed tortor. Sed gravida nibh justo, eu mattis lectus
+semper ornare.
+
+Quisque viverra ex vitae lorem dictum, at facilisis odio tempus. Proin
+libero risus, gravida et bibendum eget, ornare sit amet mi. Phasellus
+vitae suscipit augue. Etiam iaculis mauris in suscipit interdum. Sed at
+nisl dolor. Ut ut sollicitudin tortor, eget porttitor erat. Vestibulum
+viverra ac nibh sit amet pretium. Ut commodo scelerisque neque tempor
+eleifend. Nulla facilisi. In mollis est quis urna efficitur, id porta
+leo maximus. Ut vel augue enim. Aliquam non odio pharetra lorem gravida
+facilisis.
+
+Donec dui nunc, convallis nec lectus non, accumsan dictum lorem. Nam
+viverra, libero sed pulvinar tincidunt, mi augue rhoncus neque, et
+venenatis turpis velit quis odio. Nulla feugiat vitae urna id congue.
+Pellentesque efficitur facilisis hendrerit. Quisque vehicula vel risus
+vel faucibus. Quisque eleifend mattis maximus. Interdum et malesuada
+fames ac ante ipsum primis in faucibus.
+
+Mauris blandit nisi non dapibus lobortis. Morbi sit amet elementum
+libero, sed laoreet est. Sed auctor nibh ac semper faucibus. Fusce
+pretium ultrices neque, sit amet luctus mi sollicitudin vel. Suspendisse
+efficitur metus quis dui posuere, id vehicula dui pulvinar. Donec sit
+amet dapibus diam. Donec libero sem, fringilla et cursus ut, lacinia
+quis nisl. Donec ullamcorper malesuada purus tempor venenatis. Morbi vel
+ante vulputate, feugiat velit at, pellentesque odio. Phasellus nec justo
+aliquet, maximus quam a, venenatis ligula. Ut porttitor metus id diam
+sollicitudin, non lacinia augue faucibus.
+
+Morbi quis lobortis neque. Aenean blandit, dui et sollicitudin
+ullamcorper, neque leo rhoncus libero, vitae ullamcorper ex massa vitae
+dolor. Nam placerat posuere nulla ac consectetur. In porta ornare nisi
+quis suscipit. Quisque sed turpis sit amet mi sagittis molestie ac in
+nisi. Integer ligula nulla, lobortis ac elementum sit amet, ultricies
+eget leo. Nulla ullamcorper dolor vel neque pretium, quis porttitor est
+consequat. Donec euismod mauris sit amet dui fermentum, eget tempor dui
+suscipit. Ut eros risus, semper in sollicitudin vel, lacinia a sapien.
+Duis fermentum mauris nec diam vestibulum fringilla.
 
 \begin{figure}
 \hypertarget{fig:screen1}{%
@@ -301,45 +399,8 @@
 }
 \end{figure}
 
-\begin{figure}
-\hypertarget{fig:screen2}{%
-\centering
-\includegraphics[width=\textwidth,height=1.5in]{media/CSC310-Case1-2.png}
-\caption{CalcTaxes Screen 2}\label{fig:screen2}
-}
-\end{figure}
-
-\begin{figure}
-\hypertarget{fig:screen3}{%
-\centering
-\includegraphics[width=\textwidth,height=1.5in]{media/CSC310-Case1-3.png}
-\caption{CalcTaxes Screen 3}\label{fig:screen3}
-}
-\end{figure}
-
-\begin{figure}
-\hypertarget{fig:screen4}{%
-\centering
-\includegraphics[width=\textwidth,height=1.5in]{media/CSC310-Case1-4.png}
-\caption{CalcTaxes Screen 4}\label{fig:screen4}
-}
-\end{figure}
-
-\begin{figure}
-\hypertarget{fig:screen5}{%
-\centering
-\includegraphics[width=\textwidth,height=1.5in]{media/CSC310-Case1-5.png}
-\caption{CalcTaxes Screen 5}\label{fig:screen5}
-}
-\end{figure}
-
-\begin{figure}
-\hypertarget{fig:screen6}{%
-\centering
-\includegraphics[width=\textwidth,height=1.5in]{media/CSC310-Case1-6.png}
-\caption{CalcTaxes Screen 6}\label{fig:screen6}
-}
-\end{figure}
+\hypertarget{references}{%
+\subsection{References}\label{references}}
 
 
 
